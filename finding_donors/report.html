@@ -13151,7 +13151,7 @@ div#notebook {
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[3]:</div>
+<div class="prompt input_prompt">In&nbsp;[28]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Import libraries necessary for this project</span>
@@ -13285,6 +13285,41 @@ div#notebook {
 </div>
 
 </div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[27]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">data</span><span class="o">.</span><span class="n">income</span><span class="o">.</span><span class="n">value_counts</span><span class="p">()</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt output_prompt">Out[27]:</div>
+
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>&lt;=50K    34014
+&gt;50K     11208
+Name: income, dtype: int64</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
@@ -13302,7 +13337,7 @@ div#notebook {
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[5]:</div>
+<div class="prompt input_prompt">In&nbsp;[29]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># TODO: Total number of records</span>
@@ -13393,7 +13428,7 @@ Percentage of individuals making more than $50,000: 24.78439697492371%
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[6]:</div>
+<div class="prompt input_prompt">In&nbsp;[30]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Split the data into features and target label</span>
@@ -13442,7 +13477,7 @@ Percentage of individuals making more than $50,000: 24.78439697492371%
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[7]:</div>
+<div class="prompt input_prompt">In&nbsp;[31]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Log-transform the skewed features</span>
@@ -13492,7 +13527,7 @@ Percentage of individuals making more than $50,000: 24.78439697492371%
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[8]:</div>
+<div class="prompt input_prompt">In&nbsp;[32]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Import sklearn.preprocessing.StandardScaler</span>
@@ -13717,7 +13752,7 @@ Percentage of individuals making more than $50,000: 24.78439697492371%
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[9]:</div>
+<div class="prompt input_prompt">In&nbsp;[33]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># TODO: One-hot encode the &#39;features_log_minmax_transform&#39; data using pandas.get_dummies()</span>
@@ -13785,7 +13820,7 @@ Percentage of individuals making more than $50,000: 24.78439697492371%
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[10]:</div>
+<div class="prompt input_prompt">In&nbsp;[34]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Import train_test_split</span>
@@ -13883,7 +13918,7 @@ It is a ratio of true positives(words classified as spam, and which are actually
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[41]:</div>
+<div class="prompt input_prompt">In&nbsp;[35]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">TP</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">sum</span><span class="p">(</span><span class="n">income</span><span class="p">)</span> <span class="c1"># Counting the ones as this is the naive case. Note that &#39;income&#39; is the &#39;income_raw&#39; data </span>
@@ -13895,8 +13930,8 @@ It is a ratio of true positives(words classified as spam, and which are actually
 
 <span class="c1"># TODO: Calculate accuracy, precision and recall</span>
 <span class="n">accuracy</span> <span class="o">=</span> <span class="p">(</span><span class="n">TP</span> <span class="o">+</span> <span class="n">TN</span><span class="p">)</span> <span class="o">/</span> <span class="p">(</span><span class="n">TN</span> <span class="o">+</span> <span class="n">FN</span> <span class="o">+</span> <span class="n">FP</span> <span class="o">+</span> <span class="n">TP</span><span class="p">)</span>
-<span class="n">recall</span> <span class="o">=</span> <span class="n">TP</span> <span class="o">/</span> <span class="p">(</span><span class="n">TP</span> <span class="o">+</span> <span class="n">FP</span><span class="p">)</span>
-<span class="n">precision</span> <span class="o">=</span> <span class="n">TP</span> <span class="o">/</span> <span class="p">(</span><span class="n">FN</span> <span class="o">+</span> <span class="n">TP</span><span class="p">)</span>
+<span class="n">recall</span> <span class="o">=</span> <span class="n">TP</span> <span class="o">/</span> <span class="p">(</span><span class="n">TP</span> <span class="o">+</span> <span class="n">FN</span><span class="p">)</span>
+<span class="n">precision</span> <span class="o">=</span> <span class="n">TP</span> <span class="o">/</span> <span class="p">(</span><span class="n">FP</span> <span class="o">+</span> <span class="n">TP</span><span class="p">)</span>
 
 <span class="c1"># TODO: Calculate F-score using the formula above for beta = 0.5 and correct values for precision and recall.</span>
 <span class="n">fscore</span> <span class="o">=</span> <span class="p">(</span><span class="mi">1</span> <span class="o">+</span> <span class="p">(</span><span class="mf">0.5</span><span class="o">**</span><span class="mi">2</span><span class="p">))</span> <span class="o">*</span> <span class="p">(</span> <span class="p">(</span><span class="n">precision</span> <span class="o">*</span> <span class="n">recall</span><span class="p">)</span> <span class="o">/</span> <span class="p">((</span><span class="mf">0.5</span><span class="o">**</span><span class="mi">2</span><span class="p">)</span> <span class="o">*</span> <span class="n">precision</span> <span class="o">+</span> <span class="n">recall</span><span class="p">))</span>
@@ -13919,7 +13954,7 @@ It is a ratio of true positives(words classified as spam, and which are actually
 
 
 <div class="output_subarea output_stream output_stdout output_text">
-<pre>Naive Predictor: [Accuracy score: 0.2478, F-score: 0.6223]
+<pre>Naive Predictor: [Accuracy score: 0.2478, F-score: 0.2917]
 </pre>
 </div>
 </div>
@@ -13967,15 +14002,13 @@ It is a ratio of true positives(words classified as spam, and which are actually
 <div class="text_cell_render border-box-sizing rendered_html">
 <h3 id="Logistic-Regression">Logistic Regression<a class="anchor-link" href="#Logistic-Regression">&#182;</a></h3><ul>
 <li>A use case for this is predicting who will win the election, and the outcome will be win or not win.</li>
-<li>Can be categorical or numerical.</li>
-<li>models the probability of an event occuring depending on the values of the independent variables.</li>
-<li>predicts a series of variables on a binary dependent variable (outcome)</li>
-<li>good for classifying observations based on if the outcome variable is in a particular category.</li>
-<li>good when the outcome is a discrete variable. For example 1 or 0.</li>
+<li>good for classifying observations based on if the outcome variable is in a particular category and can be categorical or numerical.</li>
+<li>model performs poorly when the classes are highly non-linear.</li>
+<li>this is a good candidate because the outcome is binary (discrete).</li>
 <li><a href="https://www.forbes.com/sites/quora/2017/06/19/what-are-the-advantages-of-logistic-regression-over-decision-trees/#270949e82c35">https://www.forbes.com/sites/quora/2017/06/19/what-are-the-advantages-of-logistic-regression-over-decision-trees/#270949e82c35</a></li>
 </ul>
 <h3 id="Decision-Trees">Decision Trees<a class="anchor-link" href="#Decision-Trees">&#182;</a></h3><ul>
-<li>This can be used in businesses to make a decision on whether to launch a new product or not. This algorithm helps you to make a decision.</li>
+<li>A real world application of this algorithm is decide if a customer will churn (leave a competitor).</li>
 <li>An advantage is that it is simple to understand and visualize, and it can handle categorical <strong>and</strong> numerical data.</li>
 <li>A highly complicated decision tree tends to have a low bias which makes it memorize data and harder to work with the new data. </li>
 <li>This would work well with this problem because we are trying to find the outcome whether to send the letter or not. This is a decision which needs to be acted upon based on the features.</li>
@@ -14238,7 +14271,8 @@ Look at the graph at the bottom left from the cell above(the visualization creat
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p><strong>This algorithm takes several weak models or algorithms to produce a more powerful ensemble or algorithm. The way this algorithm works is that it takes some weak learners (these algorithms basically does just a little better than guessing data) and and trains them for a given number of times. It then takes the stronger learners. For the learners that are weaker, it gives a higher weight or significance, then it trains the learner again with the higher weight so that it can get better. This is done a number of times, therefore, making a much stronger learner. Also, because these are initially weak learners, the algorithm should be fast.</strong></p>
+<p><strong>This algorithm is a classifier algorithm, which means that it will implement a set of intructions that will classify or predict whether the person is making more than 50K or less. The way that this algorithm works is that firstly it takes a weak algorithm (an algorithm that will make a simple prediction, this is called a learner), and combines them to make a stronger, more complex algorithm.</strong></p>
+<p><strong>To explain further, an example of this is finding out which customer will leave the company based on a certain number of features or characteristics of the customer. Firstly, the Adaboost algorithm will make some predictions on the data that you have. It will then take the predictions that is not correct (errors), and apply weights to them. Weights is simply making the error or the predictions that were not right stand out more. This way it focuses on the data points that are hard to predict so it can predict these better. Secondly, it will take predictions that were not correct and make the weights bigger (weights are measure that will give more importants to the data points so that when training again, the algorithm will try to predict this right the next time). Then, the model will be trained again with a focus on predicting these points correctly. This happens a number of times. After the models are trained for a determined number of rounds, the model will combine these classifications into one complex learner that will then be able to make more accurate predictions.</strong></p>
 <p>Reference:</p>
 <ul>
 <li><a href="http://scikit-learn.org/stable/modules/ensemble.html">http://scikit-learn.org/stable/modules/ensemble.html</a></li>
